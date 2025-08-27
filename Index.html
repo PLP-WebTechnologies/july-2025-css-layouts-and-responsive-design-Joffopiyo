@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Layouts Assignment</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>My Responsive Page</h1>
+            <p>Using Flexbox and CSS Grid for Layouts</p>
+        </header>
+
+        <!-- Navigation Bar (Flexbox) -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area (CSS Grid) -->
+        <div class="main-content">
+            <!-- Article Section -->
+            <div class="article-section">
+                <h2>Article Title</h2>
+                <p>This is the main article content. It takes up a larger portion of the screen on tablets and desktops, providing ample space for text and images. On mobile devices, it occupies the full width of the container, stacking on top of the sidebar. This demonstrates the use of a flexible grid layout to adapt to different screen sizes. You can add more paragraphs and images here to showcase the responsive behavior.</p>
+                <p>The grid layout makes it easy to manage both one-dimensional and two-dimensional layouts, ensuring your page looks great on any device. The content is designed to be easily readable and accessible, with proper spacing and font sizes that adjust with the viewport. This is a core tenet of responsive web design.</p>
+            </div>
+
+            <!-- Sidebar Section -->
+            <div class="sidebar-section">
+                <h2>Sidebar</h2>
+                <p>This is the sidebar. On desktops, it sits to the right of the article. On mobile, it's placed directly below the article for a clean, single-column layout. It's a great spot for additional information, links, or advertisements.</p>
+                <p>The layout is controlled by the parent `.main-content` class, which uses `display: grid` and sets its columns based on the screen size using media queries.</p>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Responsive Assignment. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

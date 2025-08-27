@@ -1,0 +1,124 @@
+/* Base styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #4a5568;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* --- Navigation Bar (Flexbox) --- */
+nav {
+    background-color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Default to column stacking for mobile */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.nav-links li a:hover {
+    background-color: #cbd5e0;
+}
+
+/* --- Main Content Area (CSS Grid) --- */
+.main-content {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.article-section {
+    background-color: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.sidebar-section {
+    background-color: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #4a5568;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*
+    --- Media Queries for Responsive Design ---
+*/
+
+/* Tablet View: min-width 768px */
+@media (min-width: 768px) {
+    .nav-links {
+        flex-direction: row; /* Switch to horizontal layout */
+        justify-content: center;
+        gap: 1rem; /* Add some space between links */
+    }
+
+    .main-content {
+        grid-template-columns: 3fr 1fr; /* Two columns: article (3/4) and sidebar (1/4) */
+    }
+}
+
+/* Desktop View: min-width 1024px */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .main-content {
+        grid-template-columns: 3fr 1fr; /* Maintain two columns on desktop */
+        gap: 2rem;
+    }
+}
